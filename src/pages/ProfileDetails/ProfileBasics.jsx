@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import verifyBg from "../../assets/images/verifyBg.webp"
 import { useNavigate } from 'react-router-dom'
 
@@ -12,17 +12,33 @@ const ProfileBasics = () => {
     const [continueToggle, setContinueToggle] = useState(false)
     const navigate = useNavigate()
 
-    const handleNavigate = (e) => {
-        e.preventDefault()
-        navigate("/")
-    }
-
     const handleInputChange = (e) => {
         let { name, value } = e.target
         setProfileData({ ...profileData, [name]: value })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(profileData)
+        setProfileData({
+            firstName: "",
+            lastName: "",
+            company: "",
+            website: ""
+        })
+        navigate("/address")
+    }
+
     const { firstName, lastName, company, website } = profileData
+
+    useEffect(() => {
+        if (firstName === "" || lastName === "" || company === "") {
+            setContinueToggle(false);
+        } else {
+            setContinueToggle(true);
+        }
+    }, [profileData]);
+
     return (
         <>
             <section className='grid grid-cols-1 lg:grid-cols-2'>
@@ -48,7 +64,7 @@ const ProfileBasics = () => {
                                             type="text"
                                             name='firstName'
                                             value={firstName}
-                                            onClick={() => handleInputChange(e)}
+                                            onChange={handleInputChange}
                                         ></input>
                                     </div>
                                     <div className="w-full">
@@ -61,9 +77,9 @@ const ProfileBasics = () => {
                                         <input
                                             className="flex mt-3 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
                                             type="text"
-                                            name='lasstName'
+                                            name='lastName'
                                             value={lastName}
-                                            onClick={() => handleInputChange(e)}
+                                            onChange={handleInputChange}
                                         ></input>
                                     </div>
                                 </div>
@@ -75,11 +91,11 @@ const ProfileBasics = () => {
                                         Company name <span className='text-[red]'>*</span>
                                     </label>
                                     <input
-                                        className="flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
+                                        className="flex mt-3 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
                                         type="text"
                                         name='company'
                                         value={company}
-                                        onClick={() => handleInputChange(e)}
+                                        onChange={handleInputChange}
                                     ></input>
                                 </div>
                                 <div className="w-full mt-4">
@@ -87,20 +103,34 @@ const ProfileBasics = () => {
                                         className="text-md font-semibold leading-none"
                                         htmlFor="name"
                                     >
-                                        Website <span className='text-[red]'>*</span>
+                                        Website
                                     </label>
                                     <input
-                                        className="flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
+                                        className="flex mt-3 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
                                         type="text"
                                         name='website'
                                         value={website}
-                                        onClick={() => handleInputChange(e)}
+                                        onChange={handleInputChange}
                                     ></input>
                                 </div>
-                                <div className='mt-16 flex justify-end'>
-                                    <button type='button' className='btn text-[#6359DE] font-semibold px-3 py-0.5 hover:bg-[#afa9da7d] rounded-2xl '>Answer later</button>
-                                    <button type='button' className='btn rounded-2xl  bg-[#939393] text-white px-3 py-2 cursor-not-allowed' disabled onClick={handleNavigate} >Continue</button>
-                                </div>
+
+                                {
+                                    continueToggle ?
+                                        <div className='mt-16 flex justify-end'>
+                                            <button type='button' className='btn rounded-2xl  bg-[#000] text-white px-3 py-2' onClick={handleSubmit}>Continue</button>
+                                        </div>
+                                        :
+                                        <div className='mt-16 flex justify-end'>
+                                            <button type='button' className='btn text-[#6359DE] 
+                                            font-semibold px-3 py-0.5 hover:bg-[#afa9da7d] rounded-2xl'>
+                                                Answer later
+                                            </button>
+                                            <button type='button' className='btn rounded-2xl  bg-[#939393] text-white px-3 py-2 cursor-not-allowed' disabled>Continue</button>
+                                        </div>
+
+
+                                }
+
                             </form>
                         </div>
                     </div>

@@ -3,6 +3,27 @@ import verifyBg from "../../assets/images/verifyBg.webp"
 import { useNavigate } from 'react-router-dom'
 
 const Business = () => {
+
+    const teams = [
+        { employees: "" },
+        { employees: "0-1 employee" },
+        { employees: "2-10 employees" },
+        { employees: "11-50 employees" },
+        { employees: "51-250 employees" },
+        { employees: "> 250 employees" },
+    ]
+
+    const contacts = [
+        { count: "" },
+        { count: "1 - 300" },
+        { count: "301 - 2k" },
+        { count: "2001 - 5k" },
+        { count: "5k - 20k" },
+        { count: "20k - 100k" },
+        { count: "More than 100K" },
+        { count: "No contacts yet" }
+    ]
+
     const navigate = useNavigate()
 
     const handleNavigate = (e) => {
@@ -29,50 +50,60 @@ const Business = () => {
                                         How many people are on your team? <span className='text-[red]'>*</span>
                                     </label>
 
-                                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                                    </svg>
-                                    </button>
-
-                                    {/* <!-- Dropdown menu --> */}
-                                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <input
-                                        className="flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
-                                        type="text"
-                                        id="name"
-                                    ></input>
+                                    <select name='country' id="" className='flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:border-blue-700  hover:border-black cursor-pointer'
+                                    >
+                                        {teams.map((team, index) => (
+                                            <option key={index} value=''>
+                                                {team.employees}
+                                            </option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div className="w-full mt-4">
                                     <label
                                         className="text-md font-semibold leading-none"
                                         htmlFor="name"
                                     >
-                                        Website <span className='text-[red]'>*</span>
+                                        How many contacts do you need to have? <span className='text-[red]'>*</span>
                                     </label>
-                                    <input
-                                        className="flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700"
-                                        type="text"
-                                        id="name"
-                                    ></input>
+                                    <select name='country' id="" className='flex mt-2 h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-blue-700'
+                                    >
+                                        {contacts.map((contact, index) => (
+                                            <option key={index} value='' className='relative top-12 end-12'>
+                                                {contact.count}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div className="w-full mt-4 flex flex-col">
+                                    <label
+                                        className="text-md font-semibold leading-none"
+                                        htmlFor="name"
+                                    >
+                                        Do you sell online? <span className='text-[red]'>*</span>
+                                    </label>
+                                    <div className='flex items-center gap-6 mt-5'>
+                                        <div className="flex items-center justify-start">
+                                            <input type="radio" value="" name="online" className="w-4 h-4 text-[#6359DE] bg-gray-100 border-gray-300 focus:ring-white " />
+                                            <label for="default-radio-1" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">yes</label>
+                                        </div>
+                                        <div className="flex items-center">
+                                            <input type="radio" value="" name="online" className="w-4 h-4 text-[#6359DE] bg-gray-100 border-gray-300 focus:ring-white" />
+                                            <label for="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">no</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className='w-full mt-4'>
+                                    <div className="flex gap-2 items-center cursor-pointer">
+                                        <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-[#6359DE] bg-gray-100 border-gray-300 focus:ring-white rounded-sm" />
+
+                                        <label for="link-checkbox" className="ms-2 text-md text-gray-900 dark:text-gray-300">I don’t want to receive product updates, marketing tips, or promotional content from Brevo. To know more about how we process personal data please read the<a href="#" className="text-black underline ms-1">Privacy Policy</a>.</label>
+                                    </div>
+
                                 </div>
                                 <div className='mt-16 flex justify-end'>
-                                    <button type='button' className='btn text-[#6359DE] font-semibold px-3 py-0.5 hover:bg-[#afa9da7d] rounded-2xl '>Answer later</button>
+                                    <button type='button' className='btn text-[#6359DE] font-semibold px-3 py-0.5 hover:bg-[#afa9da7d] rounded-2xl '>Back</button>
                                     <button type='button' className='btn rounded-2xl  bg-[#939393] text-white px-3 py-2' onClick={handleNavigate} >Continue</button>
                                 </div>
                             </form>
