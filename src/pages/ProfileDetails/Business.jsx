@@ -28,7 +28,7 @@ const Business = () => {
 
     const handleNavigate = (e) => {
         e.preventDefault()
-        navigate("/")
+        navigate("/phone")
     }
     return (
         <>
