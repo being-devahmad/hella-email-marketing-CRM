@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import hellaLogo1 from "../assets/hella logo bg-white.png";
+import hellaLogo1 from "../../assets/hella logo bg-white.png";
 import { HiArrowRight, HiArrowSmLeft } from "react-icons/hi";
 
 import {
@@ -15,6 +15,7 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navListMenuItemsResources = [
   {
@@ -176,7 +177,7 @@ function NavListMenuResources() {
               color="blue-gray"
               className="flex text-lg font-bold px-6"
             >
-                 <div className="text-[#006A43]"> {title}</div>
+              <div className="text-[#006A43]"> {title}</div>
             </Typography>
             {descriptions.map((description, index) => (
               <Typography
@@ -185,16 +186,16 @@ function NavListMenuResources() {
                 className="text-lg   px-6 transition-transform duration-200 transform hover:translate-x-6 relative group"
               >
                 <div>
-                {description}
-                <span className="absolute top-1/2 left-0  transform -translate-y-1/2 opacity-0 group-hover:opacity-100 duration-100 ">
-                                                <HiArrowRight />
-                                              </span>
+                  {description}
+                  <span className="absolute top-1/2 left-0  transform -translate-y-1/2 opacity-0 group-hover:opacity-100 duration-100 ">
+                    <HiArrowRight />
+                  </span>
                 </div>
-               
+
               </Typography>
-              
+
             ))}
-            
+
           </div>
         </MenuItem>
       </a>
@@ -225,9 +226,8 @@ function NavListMenuResources() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`hidden h-3 w-3 transition-transform lg:block ${
-                    isMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -243,9 +243,8 @@ function NavListMenuResources() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`block h-3 w-3 transition-transform lg:hidden ${
-                    isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -258,10 +257,10 @@ function NavListMenuResources() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden w-full rounded-xl lg:block">
-          <ul className="grid grid-cols-4 my-10 "  style={{
-                                borderTop: "2px solid green ",
-                                borderTopRightRadius: "50px",
-                              }}>{renderItems}</ul>
+          <ul className="grid grid-cols-4 my-10 " style={{
+            borderTop: "2px solid green ",
+            borderTopRightRadius: "50px",
+          }}>{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -284,7 +283,7 @@ function NavListMenuProducts() {
               color="blue-gray"
               className="flex text-lg font-bold "
             >
-                <div className="text-[#006A43]"> {title}</div>
+              <div className="text-[#006A43]"> {title}</div>
             </Typography>
 
             <Typography
@@ -294,8 +293,8 @@ function NavListMenuProducts() {
               {descriptions}
             </Typography>
             <span className="absolute top-6 left-0  transform -translate-y-1/2 opacity-0 group-hover:opacity-100 duration-100 ">
-                                                <HiArrowRight />
-                                              </span>
+              <HiArrowRight />
+            </span>
           </div>
         </MenuItem>
       </a>
@@ -326,9 +325,8 @@ function NavListMenuProducts() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`hidden h-3 w-3 transition-transform lg:block ${
-                    isMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -344,9 +342,8 @@ function NavListMenuProducts() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`block h-3 w-3 transition-transform lg:hidden ${
-                    isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -359,10 +356,10 @@ function NavListMenuProducts() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden w-full rounded-xl lg:block">
-          <ul className="grid grid-cols-5 my-10 "  style={{
-                                borderTop: "2px solid green ",
-                                borderTopRightRadius: "50px",
-                              }}>{renderItems}</ul>
+          <ul className="grid grid-cols-5 my-10 " style={{
+            borderTop: "2px solid green ",
+            borderTopRightRadius: "50px",
+          }}>{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -377,19 +374,19 @@ function NavListMenuSolution() {
 
   const renderItems = navListMenuItemsSolution.map(
     ({ title, descriptions }, key) => (
-      <a href="#" key={key} style={{ textDecoration: 'none', outline: 'none'  }}>
+      <a href="#" key={key} style={{ textDecoration: 'none', outline: 'none' }}>
         <MenuItem className="flex gap-4 px-10 rounded-lg">
           <div className="flex flex-col text-start rounded-lg  px-6 transition-transform duration-200 transform hover:translate-x-6 relative group my-7">
             <Typography
               variant="h6"
-              color="blue-gray" 
+              color="blue-gray"
               className="flex text-lg font-bold "
             >
-             <div className="text-[#006A43]"> {title}
-             
-            
-             </div>
-           
+              <div className="text-[#006A43]"> {title}
+
+
+              </div>
+
             </Typography>
 
             <Typography
@@ -399,8 +396,8 @@ function NavListMenuSolution() {
               {descriptions}
             </Typography>
             <span className="absolute top-6 left-0  transform -translate-y-1/2 opacity-0 group-hover:opacity-100 duration-100 ">
-                                                <HiArrowRight />
-                                              </span>
+              <HiArrowRight />
+            </span>
           </div>
         </MenuItem>
       </a>
@@ -431,9 +428,8 @@ function NavListMenuSolution() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`hidden h-3 w-3 transition-transform lg:block ${
-                    isMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -449,9 +445,8 @@ function NavListMenuSolution() {
                   viewBox="0 0 17 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`block h-3 w-3 transition-transform lg:hidden ${
-                    isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                  className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                    }`}
                 >
                   <path
                     d="M8.98781 9.33325C8.98781 4.95499 5.41045 1.41353 0.987793 1.41353M8.98778 9.25297C8.98778 4.87471 12.5651 1.33325 16.9878 1.33325"
@@ -464,10 +459,10 @@ function NavListMenuSolution() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden w-full rounded-xl lg:block">
-          <ul className="grid grid-cols-5  my-10"  style={{
-                                borderTop: "2px solid green ",
-                                borderTopRightRadius: "50px",
-                              }}>{renderItems}</ul>
+          <ul className="grid grid-cols-5  my-10" style={{
+            borderTop: "2px solid green ",
+            borderTopRightRadius: "50px",
+          }}>{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -513,7 +508,7 @@ const Header = () => {
     setIsOpen(!isOpen);
     setIsRotated(!isRotated);
     setIsOpen1((prev) => !prev);
-    
+
     // Toggle the corresponding showBox state based on the dropdown
     if (dropdown === 'products') {
       setShowBoxProducts(true);
@@ -567,12 +562,13 @@ const Header = () => {
               </button>
             </a>
 
-            <button
+            <Link
+              to={'/signup'}
               type="button"
               className="rounded-lg border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-3 py-2 text-medium font-semibold text-white hover:text-[#10754D]  "
             >
               Sign Up Free
-            </button>
+            </Link>
             <button
               type="button"
               className="rounded-lg border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-3 py-2 text-medium font-semibold text-white hover:text-[#10754D]  "
@@ -602,7 +598,7 @@ const Header = () => {
         <div className="">
           {/* Your data to be displayed when openNav is true */}
           {showData && (
-            <div className="h-screen "style={{ height: calculatedHeight }}>
+            <div className="h-screen " style={{ height: calculatedHeight }}>
               <div className="px-5  pt-4">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2"></div>
@@ -822,14 +818,15 @@ const Header = () => {
                   </nav>
                 </div>
                 <div className="mt-2 space-y-2 flex flex-col justify-center items-center bottom-4 absolute w-full left-0 px-6 "
-               
+
                 >
-                  <button
+                  <Link
+                    to={'/signup'}
                     type="button"
                     className="w-full rounded-lg border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-3 py-2 text-medium font-semibold text-white hover:text-[#10754D]  "
                   >
                     Sign Up Free
-                  </button>
+                  </Link>
                   <button
                     type="button"
                     className="w-full rounded-lg border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-3 py-2 text-medium font-semibold text-white hover:text-[#10754D]  "

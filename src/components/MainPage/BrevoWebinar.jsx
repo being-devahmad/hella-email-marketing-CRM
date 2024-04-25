@@ -1,5 +1,5 @@
 import React from 'react'
-import cdp from "../assets/cdp_webinar_media_cta_op3-1.webp";
+import cdp from "../../assets/cdp_webinar_media_cta_op3-1.webp";
 const BrevoWebinar = () => {
   return (
     <>

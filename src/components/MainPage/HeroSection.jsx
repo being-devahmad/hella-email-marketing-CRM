@@ -1,11 +1,13 @@
 import React from 'react'
-import heroSectionImg from "../assets/en_new_hero_image-3.webp";
+import heroSectionImg from "../../assets/heroImg.webp";
+import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
   return (
     <>
       <div
         className="relative w-full bg-[#D7FEC8] "
-      
+
       >
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:px-8 flex flex-col items-center md:flex-row">
           <div className="lg:col-span-6 xl:col-span-7 lg:ml-8 xl:ml-0">
@@ -18,12 +20,12 @@ const HeroSection = () => {
                 Email, SMS, Chat and more
               </p>
               <div className="mt-5">
-                <button
+                <Link
+                  to={'/signup'}
                   type="button"
-                  className="rounded-2xl border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-8 py-3 text-medium  text-white hover:text-[#10754D] text-xl "
-                >
+                  className="rounded-2xl border-2 border-[#006A43] bg-[#10754D]  hover:bg-white px-8 py-3 text-medium  text-white hover:text-[#10754D] text-xl " >
                   Sign Up Free
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -31,7 +33,7 @@ const HeroSection = () => {
             <img className="w-full h-auto" src={heroSectionImg} alt="img" />
           </div>
         </div>
-      </div> 
+      </div>
     </>
   )
 }

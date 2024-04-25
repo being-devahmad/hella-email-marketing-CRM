@@ -1,19 +1,19 @@
 import React from 'react'
-import bestLogo from "../assets/best_of_2023_3dgradient_1_1-300x300-1.webp";
-import martechLogo from "../assets/martech_breakthrough_awards_2023_brevo_1_-300x292-1.webp"
-import sammy from "../assets/thesammy_2023_award_logo-300x247-1.webp"
-import Leader from "../assets/marketingautomation_leader_mid_market_leader-265x300-1.webp"
-import gold from "../assets/sascs23_gold_winner_1-2-300x293-1.webp"
-import leader1 from "../assets/marketingautomation_leader_small_business_leader-264x300-1.webp"
+import bestLogo from "../../assets/best_of_2023_3dgradient_1_1-300x300-1.webp";
+import martechLogo from "../../assets/martech_breakthrough_awards_2023_brevo_1_-300x292-1.webp"
+import sammy from "../../assets/thesammy_2023_award_logo-300x247-1.webp"
+import Leader from "../../assets/marketingautomation_leader_mid_market_leader-265x300-1.webp"
+import gold from "../../assets/sascs23_gold_winner_1-2-300x293-1.webp"
+import leader1 from "../../assets/marketingautomation_leader_small_business_leader-264x300-1.webp"
 import { Rating } from "@material-tailwind/react";
-import G2 from "../assets/G2-original-1.svg"
-import Capretra from "../assets/Capterra-original-1.svg"
-import garter from "../assets/Gartner-original-1.svg"
-import aiLogo from "../assets/ai_camp-300x122-1.webp"
-import zenat from "../assets/zinat_technologies-300x122-1.webp"
-import group22 from "../assets/groupe22-300x122-1.webp"
-import lisaLp from "../assets/lp_media-300x122-1.webp"
-import abloom from "../assets/adbloom-300x122-1.webp"
+import G2 from "../../assets/G2-original-1.svg"
+import Capretra from "../../assets/Capterra-original-1.svg"
+import garter from "../../assets/Gartner-original-1.svg"
+import aiLogo from "../../assets/ai_camp-300x122-1.webp"
+import zenat from "../../assets/zinat_technologies-300x122-1.webp"
+import group22 from "../../assets/groupe22-300x122-1.webp"
+import lisaLp from "../../assets/lp_media-300x122-1.webp"
+import abloom from "../../assets/adbloom-300x122-1.webp"
 
 
 const CompanyLogos = () => {

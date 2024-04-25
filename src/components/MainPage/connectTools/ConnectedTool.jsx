@@ -9,11 +9,11 @@ import {
   DotGroup,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import aiLogo from "../../assets/ai_camp-300x122-1.webp";
-import zenat from "../../assets/zinat_technologies-300x122-1.webp";
-import group22 from "../../assets/groupe22-300x122-1.webp";
-import lisaLp from "../../assets/lp_media-300x122-1.webp";
-import abloom from "../../assets/adbloom-300x122-1.webp";
+import aiLogo from "../../../assets/ai_camp-300x122-1.webp";
+import zenat from "../../../assets/zinat_technologies-300x122-1.webp";
+import group22 from "../../../assets/groupe22-300x122-1.webp";
+import lisaLp from "../../../assets/lp_media-300x122-1.webp";
+import abloom from "../../../assets/adbloom-300x122-1.webp";
 
 const ConnectedTool = () => {
   const testimonials = [
@@ -59,7 +59,7 @@ const ConnectedTool = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === testimonials.length - 1 ? 0 : prevSlide + 1
     );
-    
+
   };
 
   const handleBack = () => {
@@ -118,9 +118,8 @@ const ConnectedTool = () => {
               <Dot
                 key={index}
                 slide={index}
-                className={`w-3 h-3 mx-1.5 rounded-full border border-black ${
-                  currentSlide === index ? "bg-green-900" : ""
-                }`}
+                className={`w-3 h-3 mx-1.5 rounded-full border border-black ${currentSlide === index ? "bg-green-900" : ""
+                  }`}
               />
             ))}
           </DotGroup>

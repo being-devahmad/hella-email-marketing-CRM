@@ -1,10 +1,10 @@
 import React from 'react'
 
-import markingPlateform from "../assets/MarketingPlatform-64-4.svg";
-import salePlateform from "../assets/SalesCRM-64-1.svg";
-import conversationalPlateform from "../assets/Conversations-40-3.svg";
-import coustomerPlateform from "../assets/CDP-1.svg";
-import apiPlateform from "../assets/TransactionalEmails-64-3.svg";
+import markingPlateform from "../../assets/MarketingPlatform-64-4.svg";
+import salePlateform from "../../assets/SalesCRM-64-1.svg";
+import conversationalPlateform from "../../assets/Conversations-40-3.svg";
+import coustomerPlateform from "../../assets/CDP-1.svg";
+import apiPlateform from "../../assets/TransactionalEmails-64-3.svg";
 const Cards = () => {
   return (
     <>
