@@ -8,6 +8,7 @@ import PhoneDetails from "./pages/ProfileDetails/PhoneDetails"
 import SignUp from "./pages/ProfileDetails/Signup"
 import Verify from "./pages/ProfileDetails/Verify"
 import Home from "./pages/Home/Home"
+// import Hello from "./pages/ProfileDetails/Hello"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/address" element={<AddressDetails />} />
         <Route path="/business" element={<Business />} />
         <Route path="/phone" element={<PhoneDetails />} />
+        {/* <Route path="/hello" element={<Hello />} /> */}
       </Routes>
 
 
