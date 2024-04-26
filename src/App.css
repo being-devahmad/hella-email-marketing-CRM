@@ -105,3 +105,58 @@
   font-weight: 900;
   font-style: italic;
 }
+
+/* Moving Logos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+
+  position: relative;
+  white-space: nowrap;
+  display: flex; /* Ensures logos are aligned horizontally */
+  flex-wrap: nowrap; /* Prevents logos from wrapping to next line */
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-flex; /* Changed to inline-flex to keep logos in a single line */
+  flex: 1 0 auto; /* Flex property to manage sizing within the container */
+  animation: 35s slide infinite linear;
+  align-items: center; /* Aligns logos vertically within the container */
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 55px;
+}

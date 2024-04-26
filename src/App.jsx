@@ -6,9 +6,9 @@ import AddressDetails from "./pages/ProfileDetails/AddressDetails"
 import Business from "./pages/ProfileDetails/Business"
 import PhoneDetails from "./pages/ProfileDetails/PhoneDetails"
 import SignUp from "./pages/ProfileDetails/Signup"
-import Verify from "./pages/ProfileDetails/Verify"
 import Home from "./pages/Home/Home"
-// import Hello from "./pages/ProfileDetails/Hello"
+import EmailVerification from "./pages/ProfileDetails/EmailVerification"
+import PhoneVerification from "./pages/ProfileDetails/PhoneVerification"
 
 function App() {
 
@@ -17,15 +17,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/verify" element={<Verify />} />
+        <Route path="/verifyEmail" element={<EmailVerification />} />
         <Route path="/profile" element={<ProfileBasics />} />
         <Route path="/address" element={<AddressDetails />} />
         <Route path="/business" element={<Business />} />
         <Route path="/phone" element={<PhoneDetails />} />
-        {/* <Route path="/hello" element={<Hello />} /> */}
+        <Route path="/verifyPhone" element={<PhoneVerification />} />
       </Routes>
-
-
     </>
   )
 }

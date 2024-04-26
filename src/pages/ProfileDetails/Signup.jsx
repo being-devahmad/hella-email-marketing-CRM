@@ -85,7 +85,6 @@ const SignUp = () => {
                                         <span class="block text-lg font-medium text-slate-700 my-1">
                                             Password <span className="text-pink-600">*</span>
                                         </span>
-                                        {/* <input type="password" class="peer w-full rounded-xl p-2 border" /> */}
                                         <div className="relative">
                                             <input
                                                 type={`${click ? "text" : "password"}`}
@@ -111,7 +110,7 @@ const SignUp = () => {
                                         </p>
                                     </label>
 
-                                    <Link to='/verify' className="btn w-full bg-[#2C2C2C] text-white py-3 px-5 rounded-2xl font-semibold text-md ">
+                                    <Link to='/verifyEmail' className="btn w-full bg-[#2C2C2C] text-white py-3 px-5 rounded-2xl font-semibold text-md ">
                                         Create an account
                                     </Link>
                                     <p className="text-slate-400 text-sm my-4">

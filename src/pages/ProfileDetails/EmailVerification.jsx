@@ -1,8 +1,9 @@
 import React from "react";
 import Logo from "../../components/Logo";
 import verifyBg from "../../assets/images/verifyBg.webp"
+import { Link } from "react-router-dom";
 
-const Verify = () => {
+const EmailVerification = () => {
     return (
         <>
             <div>
@@ -39,11 +40,17 @@ const Verify = () => {
                                         Sign in with another email address
                                     </a>
                                 </div>
+                                <div className="flex justify-center text-center">
+                                    <Link to={'/profile'} type='button' className='btn rounded-2xl bg-black
+                                         text-white w-52 py-2 px-5'>
+                                        Continue
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {/* right section */}
-                    <div className="second md:w-[50%] md:block hidden    h-screen overflow-auto">
+                    <div className="second md:w-[50%] md:block hidden h-screen overflow-auto">
                         <img
                             src={verifyBg}
                             className="  w-full h-full object-cover  "
@@ -56,4 +63,4 @@ const Verify = () => {
     );
 };
 
-export default Verify;
+export default EmailVerification;
