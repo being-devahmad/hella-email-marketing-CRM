@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import verifyBg from "../../assets/images/verifyBg.webp"
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Logo from '../../components/Logo'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
 
@@ -1554,7 +1554,6 @@ const PhoneDetails = () => {
                         <p className='text-3xl font-semibold'>Validate your phone number</p>
                         <p className='text-md pt-4'>We need your phone number in order to set up a two-factor authentication, and secure your account.</p>
                         <div className='mt-5'>
-
                             <form action="">
                                 <div className='flex justify-between'>
                                     <div className=" w-[60%]  flex flex-col">
@@ -1632,10 +1631,9 @@ const PhoneDetails = () => {
                                             Back
                                         </button>
 
-                                        <button type='button' className='btn rounded-2xl bg-black
-                                         text-white w-52 py-2 cursor-not-allowed' disabled>
+                                        <Link to={'/verifyPhone'} type='button' className='btn rounded-2xl bg-black text-white w-52 py-2 flex justify-center items-center'>
                                             Send verification code
-                                        </button>
+                                        </Link>
 
 
 
