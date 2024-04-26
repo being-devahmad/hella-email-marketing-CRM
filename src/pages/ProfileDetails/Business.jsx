@@ -48,7 +48,7 @@ const Business = () => {
     const handleNavigate = (e) => {
         e.preventDefault()
         // setContinueToggle(true)
-        // navigate("/phone")
+        navigate("/phone")
     }
 
     const [addressData, setAddressData] = useState({
@@ -138,7 +138,7 @@ const Business = () => {
                                                     return (
                                                         <>
                                                             <p className='h-10 py-2 px-3 cursor-pointer hover:bg-[#d9d9d965]'
-                                                                onClick={() => handleTeamsSelect(team.employees)}
+                                                            onClick={() => handleTeamsSelect(team.employees)}
                                                             >{team.employees}
                                                             </p>
                                                         </>
